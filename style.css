@@ -1,0 +1,222 @@
+body {
+  background: none;
+}
+
+/*posisi jam*/
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #ffffff;
+  font-size: 60px;
+  font-family: Orbitron;
+  letter-spacing: 7px;
+}
+
+/*untuk background*/
+.banner{
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url(image/background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*untuk ukuran keseluruhan kartu pengumuman*/
+.card{
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-image: url(image/pic.png);
+  background-position: center;
+  background-size: cover;
+}
+
+/*gambar tiap kartu pengumuman*/
+.card1{
+  background-image: url(image/pp.jpg);
+}
+
+/*gambar tiap kartu pengumuman*/
+.card2{
+  background-image: url(image/pp2.jpg);
+}
+
+/*gambar tiap kartu pengumuman*/
+.card3{
+  background-image: url(image/pp.jpg);
+}
+
+/*gambar tiap kartu pengumuman*/
+.card4{
+  background-image: url(image/pp2.jpg);
+}
+
+.card:hover{
+  transform: translateY(-10px);
+}
+
+/*settingan ukuran font H3*/
+h3{
+  color: #000000;
+  text-shadow: 0 0 25px #000;
+}
+
+/*settingan bayangan kartu pengumuman*/
+.card p{
+  text-shadow: 0 0 15px #000000 ;
+  font-size: 8;
+}
+
+/*settingan untuk kolom hadist*/
+.text{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+/*settingan untuk kolom kartu pengumuman*/
+.col{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/*responsive note:under progress!*/
+
+@media screen and (max-width: 860px)
+{
+  .text{
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    position: fixed;
+    transform: translateY(-50%);
+    top: 50%;
+    color: #fff;
+  }
+  .banner{
+    padding-top: 130px;
+  }
+  .col{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    top: 0;
+    transform: translateY(-50%);
+
+    width: auto;
+    height: 1%;
+    left: auto;
+    flex-direction: column;
+    transition: all 0.5s ease;
+  }
+  .bg{
+    padding-top: 130px;
+  }
+  .card{
+    width: 60px;
+    height: 90px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px 15px 15px;
+    box-sizing: content-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url(image/pic.png);
+    background-position: center;
+    background-size: cover;
+  }
+  #divkanan{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            width: auto;
+            float: right;
+            height: 100%;
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(1px);
+            border-radius: 20px;
+            border:1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  #divkiri{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            width: auto;
+            float: left;
+            height: auto;
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(1px);
+            border-radius: 20px;
+            border:1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  #divtengah{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            width: auto;
+            height: auto;
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(1px);
+            border-radius: 20px;
+            border:1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+  }
+
+  h1 {
+      color: #ebebeb;
+  }
+
+  #clock {
+      font-size: 10px;
+      margin-top: 50px;
+      color: #fff
+  }
+
+  #schedule {
+      margin-top: 30px;
+      color: #fff
+  }
+
+  #schedule table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      color: #fff
+      
+  }
+
+  #schedule th,
+  #schedule td {
+      padding: 10px;
+      border: 1px solid #ffffff;
+      justify-content: center;
+  }
+
+  #schedule th {
+      background-color: #3f3f3f;
+      color: #fff;
+      justify-content: center;
+  }
+
+  #schedule td.prayer-time {
+      text-align: auto;
+      color: #fff
+  }
+}

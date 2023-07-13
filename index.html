@@ -1,0 +1,291 @@
+<html>
+<head> 
+    <!--responsive note:under progress-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--mengarahkan pada css-->
+    <link rel="stylesheet" href="style.css">
+    <title>Jam Masjid</title>
+
+    <!--mengatur blur setiap div-->
+    <style>
+        #divkanan {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            width: 38.83%;
+            float: right;
+            height: 100%;
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(1px);
+            border-radius: 20px;
+            border:1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        #divkiri {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            width: 38.83%;
+            float: left;
+            height: 100%;
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(1px);
+            border-radius: 20px;
+            border:1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        #divtengah {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            width: 20.33%;
+            margin: 0 auto;
+            height: 100%;
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(1px);
+            border-radius: 20px;
+            border:1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            }
+    </style>
+    
+
+        <!--untuk mengatur table jadwal jam-->
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+            
+            h1 {
+                color: #ebebeb;
+            }
+            
+            #clock {
+                font-size: 48px;
+                margin-top: 50px;
+                color: #fff
+            }
+            
+            #schedule {
+                margin-top: 30px;
+                color: #fff
+            }
+            
+            #schedule table {
+                margin: 0 auto;
+                border-collapse: collapse;
+                color: #fff
+            }
+            
+            #schedule th,
+            #schedule td {
+                padding: 10px;
+                border: 1px solid #ffffff;
+            }
+            
+            #schedule th {
+                background-color: #3f3f3f;
+                color: #fff;
+            }
+            
+            #schedule td.prayer-time {
+                text-align: center;
+                color: #fff
+            }
+        </style>
+
+        <!--untuk mengatur jam-->
+        <script>
+            function showTime() {
+                var date = new Date();
+                var hours = date.getHours();
+                var minutes = date.getMinutes();
+                var seconds = date.getSeconds();
+                
+                hours = formatTime(hours);
+                minutes = formatTime(minutes);
+                seconds = formatTime(seconds);
+                
+                var time = hours + ":" + minutes + ":" + seconds;
+                
+                document.getElementById("clock").innerText = time;
+                
+                setTimeout(showTime, 1000);
+            }
+            
+            function formatTime(time) {
+                if (time < 10) {
+                    time = "0" + time;
+                }
+                return time;
+            }
+            
+            window.onload = function() {
+                showTime();
+            }
+        </script>
+
+        <!--hitung mundur menuju magrib-->
+        <style>
+             body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            }
+            h2.jam{
+                margin-top: 200px;
+                font-size: 48px;
+            }
+            #countdown {
+            font-size: 48px;
+            margin-top: 150px;
+            }
+        </style>
+</head>
+<body>
+    <div class="banner">
+        <div id="divkanan">
+            <div class="col">
+                <div class="card card1">
+                    <h3>Pengumuman</h3>
+                    <p1><b>Setiap Malam Jum'at Diadakan Pengajian Rutin</b></p1>
+                </div>
+                <div class="card card2">
+                    <h3>Pengumuman</h3>
+                    <p1><b>Sholat Idul Adha 1444 H Tanggal 29 Juni 2023</b></p1>
+                </div>
+                <div class="card card3">
+                    <h3>Pengumuman</h3>
+                    <p1><b>1 Muharam 1445 H Tahun Baru Hijriah Atau 19 Juli 2023</b></p1>
+                </div>
+                <div class="card card4">
+                    <h3>Pengumuman</h3>
+                    <p4><b>Maulid Nabi Muhammad SAW 28 September 2023</b></p4>
+                </div>
+            </div>>
+        </div>
+        <div id="divkiri">
+            <div class="text">
+                <tr>
+                    <td>
+                        <!--untuk menampilkan text di atas paragraf 2-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1>2 Raka'at Senilai Dunia Dan Isinya</h1>
+                        <p>"Dua raka'at sholat sunnah fajar lebih aku sukai dari pada dunia dan isinya"</p>
+                        <p>[ HR.Muslim No.725]</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                        <div id="countdown"></div>
+                        <h2.jam>Waktu Menuju Solat Magrib</h2.jam>
+                        <script>
+                          // Mendapatkan waktu saat ini
+                          function getCurrentTime() {
+                            const now = new Date();
+                            const hours = now.getHours();
+                            const minutes = now.getMinutes();
+                            const seconds = now.getSeconds();
+                      
+                            return {
+                              hours,
+                              minutes,
+                              seconds
+                            };
+                          }
+                      
+                          // Mendapatkan waktu sholat Maghrib dalam detik pada hari ini
+                          function getMaghribTime() {
+                            // Ganti dengan logika untuk mendapatkan waktu sholat Maghrib
+                            const maghribTime = {
+                              hours: 18,
+                              minutes: 0,
+                              seconds: 0
+                            };
+                      
+                            return maghribTime;
+                          }
+                      
+                          // Menghitung selisih waktu mundur dari waktu sekarang ke waktu sholat Maghrib
+                          function calculateCountdown() {
+                            const currentTime = getCurrentTime();
+                            const maghribTime = getMaghribTime();
+                      
+                            // Menghitung selisih waktu dalam detik
+                            const currentSeconds = currentTime.hours * 3600 + currentTime.minutes * 60 + currentTime.seconds;
+                            const maghribSeconds = maghribTime.hours * 3600 + maghribTime.minutes * 60 + maghribTime.seconds;
+                            let countdownSeconds = maghribSeconds - currentSeconds;
+                      
+                            // Jika waktu sholat Maghrib sudah lewat pada hari ini, tambahkan 24 jam (86400 detik)
+                            if (countdownSeconds < 0) {
+                              countdownSeconds += 86400;
+                            }
+                      
+                            // Menghitung jam, menit, dan detik dari selisih waktu
+                            const hours = Math.floor(countdownSeconds / 3600);
+                            const minutes = Math.floor((countdownSeconds % 3600) / 60);
+                            const seconds = countdownSeconds % 60;
+                      
+                            return {
+                              hours,
+                              minutes,
+                              seconds
+                            };
+                          }
+                      
+                          // Memperbarui tampilan hitung mundur setiap detik
+                          function updateCountdown() {
+                            const countdownElement = document.getElementById('countdown');
+                            const countdown = calculateCountdown();
+                      
+                            // Format waktu dengan menambahkan 0 di depan jika angka < 10
+                            const formattedHours = countdown.hours < 10 ? '0' + countdown.hours : countdown.hours;
+                            const formattedMinutes = countdown.minutes < 10 ? '0' + countdown.minutes : countdown.minutes;
+                            const formattedSeconds = countdown.seconds < 10 ? '0' + countdown.seconds : countdown.seconds;
+                      
+                            // Tampilkan hitung mundur pada elemen countdown
+                            countdownElement.textContent = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+                          }
+                      
+                          // Panggil fungsi updateCountdown setiap detik
+                          setInterval(updateCountdown, 1000);
+                        </script>                    
+                    </td>
+                </tr>
+            </div>  
+        </div>
+        <div id="divtengah">
+            <h1>Masjid Jami Al-Falah</h1>
+            <div id="clock"></div>
+            <div id="schedule">
+                <h2>Jadwal Sholat</h2>
+                <table>
+                    <tr>
+                        <th>Sholat</th>
+                        <th>Waktu</th>
+                    </tr>
+                    <tr>
+                        <td>Subuh</td>
+                        <td class="prayer-time">04:30</td>
+                    </tr>
+                    <tr>
+                        <td>Dzuhur</td>
+                        <td class="prayer-time">12:00</td>
+                    </tr>
+                    <tr>
+                        <td>Ashar</td>
+                        <td class="prayer-time">15:30</td>
+                    </tr>
+                    <tr>
+                        <td>Maghrib</td>
+                        <td class="prayer-time">18:45</td>
+                    </tr>
+                    <tr>
+                        <td>Isya</td>
+                        <td class="prayer-time">20:00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>        
+    </div>
+</body>
+</html>
